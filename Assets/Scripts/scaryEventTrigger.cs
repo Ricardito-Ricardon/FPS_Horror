@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scaryEventTrigger : MonoBehaviour
+public class ScaryEventTrigger : MonoBehaviour
 {
     [SerializeField] GameObject scare;
     [SerializeField] AudioSource scareSound;
@@ -10,7 +10,7 @@ public class scaryEventTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject == GameplayStatics.GetPlayerGameObject())
         {
             scare.SetActive(true);
             //scareSound.Play();

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class pickupKey : MonoBehaviour
 {
-    [SerializeField] GameObject inttext, key, spookystuff;
+    [SerializeField] GameObject intractionText, key, spookystuff;
     [SerializeField] AudioSource pickup;
     [SerializeField] bool interactable, scaryEvent;
 
@@ -12,7 +12,7 @@ public class pickupKey : MonoBehaviour
     {
         if (other.CompareTag("MainCamera"))
         {
-            inttext.SetActive(true);
+            intractionText.SetActive(true);
             interactable = true;
         }
     }
@@ -20,7 +20,7 @@ public class pickupKey : MonoBehaviour
     {
         if (other.CompareTag("MainCamera"))
         {
-            inttext.SetActive(false);
+            intractionText.SetActive(false);
             interactable = false;
         }
     }
@@ -30,7 +30,7 @@ public class pickupKey : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                inttext.SetActive(false);
+                intractionText.SetActive(false);
                 interactable = false;
                 //pickup.Play();
                 if (scaryEvent == true)

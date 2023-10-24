@@ -2058,7 +2058,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52595769bfab1d54e9770e3f21b8b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: level2
   levelNumber: 2
 --- !u!1001 &390478204
 PrefabInstance:
@@ -3467,7 +3466,6 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
-  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -3552,21 +3550,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &705507996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705507993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef88038cc2a48bb4993a46cb8d902570, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutsceneCam: {fileID: 1002395723}
-  player: {fileID: 1680376520}
-  cutsceneTime: 3
 --- !u!1 &710933434
 GameObject:
   m_ObjectHideFlags: 0
@@ -5163,7 +5146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0382a73a67172bc4e824897816c8880e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inttext: {fileID: 867062842}
+  intractionText: {fileID: 867062842}
   key: {fileID: 1014155788}
   spookystuff: {fileID: 1751205881}
   pickup: {fileID: 0}
@@ -6699,7 +6682,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraAnim: {fileID: 1272847338}
-  walking: 0
 --- !u!1 &1284852265
 GameObject:
   m_ObjectHideFlags: 0
@@ -8293,7 +8275,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ai: {fileID: 1457151905}
-  player: {fileID: 1680376524}
 --- !u!95 &1457151907
 Animator:
   serializedVersion: 4
@@ -8410,6 +8391,52 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1467339364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1467339366}
+  - component: {fileID: 1467339365}
+  m_Layer: 0
+  m_Name: ScriptHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1467339365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467339364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88038cc2a48bb4993a46cb8d902570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneCam: {fileID: 1002395723}
+  player: {fileID: 1680376520}
+--- !u!4 &1467339366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467339364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.65277654, y: 2.4616458, z: -1.5609225}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1484667995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10805,9 +10832,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obungaAnim: {fileID: 1129107152}
-  player: {fileID: 1680376520}
-  jumpscareTime: 2
-  sceneName: death
 --- !u!1 &2101084536
 GameObject:
   m_ObjectHideFlags: 0
