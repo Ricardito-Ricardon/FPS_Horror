@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class nextLevel : MonoBehaviour
+public class NextLevel : MonoBehaviour
 {
     [SerializeField] int levelNumber;
 
@@ -13,7 +11,7 @@ public class nextLevel : MonoBehaviour
         {
             PlayerPrefs.SetInt("level", levelNumber);
             PlayerPrefs.Save();
-            SceneManagerHelper.ReloadScene();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

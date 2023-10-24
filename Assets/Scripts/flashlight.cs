@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class flashlight : MonoBehaviour
+public class Flashlight : MonoBehaviour
 {
     [SerializeField] GameObject lightSource;
     [SerializeField] bool toggle;

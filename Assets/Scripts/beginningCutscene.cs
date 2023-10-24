@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class beginningCutscene : MonoBehaviour
+public class BeginningCutscene : MonoBehaviour
 {
     [SerializeField] GameObject cutsceneCam, player;
     float cutsceneTime;

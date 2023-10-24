@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class camBob : MonoBehaviour
+public class CamBob : MonoBehaviour
 {
     [SerializeField] Animator cameraAnim;
 

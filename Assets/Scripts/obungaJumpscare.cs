@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class obungaJumpscare : MonoBehaviour
+public class ObungaJumpscare : MonoBehaviour
 {
     [SerializeField] Animator obungaAnim;
     float jumpscareTime;

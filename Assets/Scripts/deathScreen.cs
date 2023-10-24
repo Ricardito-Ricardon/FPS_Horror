@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class deathScreen : MonoBehaviour
+public class DeathScreen : MonoBehaviour
 {
     [SerializeField] string SceneName;
     [SerializeField] float waitTime;

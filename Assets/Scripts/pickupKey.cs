@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pickupKey : MonoBehaviour
+public class PickupKey : MonoBehaviour
 {
     [SerializeField] GameObject intractionText, key, spookystuff;
     [SerializeField] AudioSource pickup;

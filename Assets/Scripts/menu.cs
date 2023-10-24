@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class menu : MonoBehaviour
+public class Menu : MonoBehaviour
 {
     [SerializeField] GameObject loadingscreen;
     [SerializeField] string sceneName, sceneName2;

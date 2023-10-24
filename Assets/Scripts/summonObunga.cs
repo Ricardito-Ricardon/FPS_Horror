@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class summonObunga : MonoBehaviour
+public class SummonObunga : MonoBehaviour
 {
     [SerializeField] GameObject obunga, block1, block2, block3;
     [SerializeField] Collider collision;

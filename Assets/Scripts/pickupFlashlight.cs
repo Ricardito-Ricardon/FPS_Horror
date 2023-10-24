@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pickupFlashlight : MonoBehaviour
+public class PickupFlashlight : MonoBehaviour
 {
     [SerializeField] GameObject inttext, flashlight_table, flashlight_hand;
     [SerializeField] AudioSource pickup;

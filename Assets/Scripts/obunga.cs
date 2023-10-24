@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class obunga : MonoBehaviour
+public class Obunga : MonoBehaviour
 {
     [SerializeField] NavMeshAgent ai;
     Vector3 dest;
