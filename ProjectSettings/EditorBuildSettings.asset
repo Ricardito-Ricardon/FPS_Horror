@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/level2.unity
-    guid: 3a0c4e183da72d547a9743ed6428b3c8
+    guid: eeb88d929066e1847b9eaf51a46d2a5f
   - enabled: 1
     path: Assets/Scenes/death.unity
     guid: 932768507ae6ddc4e8c90855cd3ed311

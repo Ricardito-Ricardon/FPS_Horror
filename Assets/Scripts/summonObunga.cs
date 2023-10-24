@@ -7,6 +7,7 @@ public class summonObunga : MonoBehaviour
     [SerializeField] GameObject obunga, block1, block2, block3;
     [SerializeField] Collider collision;
     [SerializeField] bool blocks;
+    [SerializeField] AudioSource replaceMusic;
 
     void OnTriggerEnter(Collider other)
     {
@@ -20,6 +21,7 @@ public class summonObunga : MonoBehaviour
                 block3.SetActive(false);
             }
             collision.enabled = false;
+            replaceMusic.Stop();
         }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScaryEventTrigger : MonoBehaviour
+public class scaryEventTrigger : MonoBehaviour
 {
     [SerializeField] GameObject scare;
     [SerializeField] AudioSource scareSound;

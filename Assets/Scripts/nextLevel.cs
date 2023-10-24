@@ -13,7 +13,7 @@ public class nextLevel : MonoBehaviour
         {
             PlayerPrefs.SetInt("level", levelNumber);
             PlayerPrefs.Save();
-            SceneManagerHelper.ReloadScene();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
