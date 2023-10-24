@@ -5,24 +5,20 @@ using UnityEngine;
 public class camBob : MonoBehaviour
 {
     [SerializeField] Animator cameraAnim;
-    [SerializeField] bool walking;
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        if (IsWalking())
         {
-            walking = true;
             cameraAnim.ResetTrigger("idle");
             cameraAnim.ResetTrigger("sprint");
             cameraAnim.SetTrigger("walk");
-            if (walking == true)
+
+            if (Input.GetKey(KeyCode.LeftShift))
             {
-                if (Input.GetKey(KeyCode.LeftShift))
-                {
-                    cameraAnim.ResetTrigger("walk");
-                    cameraAnim.ResetTrigger("idle");
-                    cameraAnim.SetTrigger("sprint");
-                }
+                cameraAnim.ResetTrigger("walk");
+                cameraAnim.ResetTrigger("idle");
+                cameraAnim.SetTrigger("sprint");
             }
         }
         else
@@ -30,7 +26,11 @@ public class camBob : MonoBehaviour
             cameraAnim.ResetTrigger("walk");
             cameraAnim.ResetTrigger("sprint");
             cameraAnim.SetTrigger("idle");
-            walking = false;
         }
+    }
+
+    bool IsWalking()
+    {
+        return Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D);
     }
 }

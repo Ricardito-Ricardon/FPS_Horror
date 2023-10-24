@@ -5,16 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class nextLevel : MonoBehaviour
 {
-    [SerializeField] string sceneName;
     [SerializeField] int levelNumber;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject == GameplayStatics.GetPlayerGameObject())
         {
             PlayerPrefs.SetInt("level", levelNumber);
             PlayerPrefs.Save();
-            SceneManager.LoadScene(sceneName);
+            SceneManagerHelper.ReloadScene();
         }
     }
 }

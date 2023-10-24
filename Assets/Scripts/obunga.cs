@@ -6,12 +6,11 @@ using UnityEngine.AI;
 public class obunga : MonoBehaviour
 {
     [SerializeField] NavMeshAgent ai;
-    [SerializeField] Transform player;
     Vector3 dest;
 
     void Update()
     {
-        dest = player.position;
+        dest = GameplayStatics.GetPlayerGameObject().transform.position;
         ai.destination = dest;
     }
 }
