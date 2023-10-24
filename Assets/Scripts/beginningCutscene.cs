@@ -5,13 +5,10 @@ using UnityEngine;
 public class BeginningCutscene : MonoBehaviour
 {
     [SerializeField] GameObject cutsceneCam, player;
-    float cutsceneTime;
+    [SerializeField] float cutsceneTime;
 
     void Start()
     {
-
-        Animator animator = cutsceneCam.GetComponent<Animator>();
-        cutsceneTime = animator.GetCurrentAnimatorStateInfo(0).length;
         StartCoroutine(cutscene());
     }
     IEnumerator cutscene()

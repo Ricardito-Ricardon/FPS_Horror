@@ -6,21 +6,22 @@ using UnityEngine.SceneManagement;
 public class ObungaJumpscare : MonoBehaviour
 {
     [SerializeField] Animator obungaAnim;
-    float jumpscareTime;
+    [SerializeField] GameObject player;
+    [SerializeField] float jumpscareTime;
+    [SerializeField] string sceneName;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            other.gameObject.SetActive(false);
+            player.SetActive(false);
             obungaAnim.SetTrigger("jumpscare");
-            jumpscareTime = obungaAnim.runtimeAnimatorController.animationClips[0].length;
             StartCoroutine(jumpscare());
         }
     }
     IEnumerator jumpscare()
     {
         yield return new WaitForSeconds(jumpscareTime);
-        SceneManagerHelper.ReloadScene();
+        SceneManager.LoadScene(sceneName);
     }
 }
