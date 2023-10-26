@@ -7,6 +7,8 @@ public class obungaJumpscare : MonoBehaviour
 {
     [SerializeField] Animator obungaAnim;
     float jumpscareTime;
+    [SerializeField] AudioSource scareSound;
+    [SerializeField] AudioSource scaryMusic;
 
     void OnTriggerEnter(Collider other)
     {
@@ -16,6 +18,8 @@ public class obungaJumpscare : MonoBehaviour
             obungaAnim.SetTrigger("jumpscare");
             jumpscareTime = obungaAnim.runtimeAnimatorController.animationClips[0].length;
             StartCoroutine(jumpscare());
+            scaryMusic.Stop();
+            scareSound.Play();
         }
     }
     IEnumerator jumpscare()
